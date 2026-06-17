@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-// import Navbar from "../components/layout/Navbar";
-// import Footer from "../components/layout/Footer";
+import Navbar from "../../components/layout/Navbar";
+import Footer from "../../components/layout/Footer";
 
 function Timer() {
   const modes = {
@@ -86,7 +86,7 @@ function Timer() {
       {/* NAVBAR */}
       <Navbar />
       {/* MAIN CONTENT */}
-      <div className="flex-1 flex flex-col items-center justify-center">
+      <div className="flex-1 flex flex-col items-center justify-center pt-20">
         {/* MODE BUTTONS */}
         <div className="flex gap-3 mb-8">
           {Object.keys(modes).map((mode) => (
@@ -161,6 +161,8 @@ function Timer() {
           </button>
         </div>
       </div>
+      {/* FOOTER */}
+      <Footer />
 
     </div>
   );
