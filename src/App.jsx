@@ -1,16 +1,12 @@
-import Header from "./components/Layout/Header";
-import Footer from "./components/Layout/Footer";
-import Home from "./pages/Home";
-import 
+
+import Navbar from "./components/Home/Navbar";
+import Hero from "./components/Home/Hero";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Home />
-      <Footer />
-    </>
+    <div className="pt-24">
+      <Navbar />
+      <Hero />
+    </div>
   );
 }
-
-export default App;

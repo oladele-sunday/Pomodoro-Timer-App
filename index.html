@@ -1,13 +1,184 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pomodoro-app</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>FocusFlow - Deep Work &amp; Productivity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-fixed-variant": "#41484a",
+            "primary-fixed-dim": "#ffb4a9",
+            "tertiary-container": "#6f7678",
+            "secondary-container": "#dfe0e0",
+            "tertiary-fixed-dim": "#c1c8ca",
+            "on-primary": "#ffffff",
+            "on-error": "#ffffff",
+            "on-surface": "#191c1f",
+            "surface-container-highest": "#e1e2e6",
+            "surface-container": "#edeef2",
+            "inverse-surface": "#2e3134",
+            "on-secondary-fixed": "#1a1c1c",
+            "on-primary-fixed-variant": "#910807",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#fffbff",
+            "surface-bright": "#f8f9fd",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#454747",
+            error: "#ba1a1a",
+            "on-secondary-container": "#616363",
+            "inverse-on-surface": "#eff1f5",
+            surface: "#f8f9fd",
+            "error-container": "#ffdad6",
+            "surface-tint": "#b4271d",
+            "primary-container": "#d43e30",
+            "on-primary-fixed": "#410000",
+            "tertiary-fixed": "#dde4e6",
+            "surface-variant": "#e1e2e6",
+            secondary: "#5d5f5f",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#ffb4a9",
+            "surface-container-high": "#e7e8ec",
+            tertiary: "#565d5f",
+            "secondary-fixed": "#e2e2e2",
+            "surface-dim": "#d9dade",
+            "primary-fixed": "#ffdad5",
+            background: "#f8f9fd",
+            primary: "#b1241a",
+            outline: "#8e706b",
+            "surface-container-low": "#f2f3f7",
+            "on-tertiary-container": "#f9fdff",
+            "on-tertiary-fixed": "#161d1f",
+            "on-surface-variant": "#5a413d",
+            "outline-variant": "#e2beb9",
+            "secondary-fixed-dim": "#c6c6c7",
+            "on-background": "#191c1f",
+            "on-error-container": "#93000a",
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+          spacing: {
+            xl: "80px",
+            lg: "48px",
+            xs: "4px",
+            sm: "12px",
+            "container-max": "1200px",
+            gutter: "24px",
+            md: "24px",
+            base: "8px",
+          },
+          fontFamily: {
+            "display-timer": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "headline-md": ["Inter"],
+            "headline-lg": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "label-md": ["Inter"],
+          },
+          fontSize: {
+            "display-timer": [
+              "120px",
+              {
+                lineHeight: "120px",
+                letterSpacing: "-0.04em",
+                fontWeight: "700",
+              },
+            ],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }],
+            "headline-md": [
+              "24px",
+              { lineHeight: "32px", fontWeight: "600" },
+            ],
+            "headline-lg": [
+              "32px",
+              {
+                lineHeight: "40px",
+                letterSpacing: "-0.02em",
+                fontWeight: "600",
+              },
+            ],
+            "headline-lg-mobile": [
+              "28px",
+              { lineHeight: "36px", fontWeight: "600" },
+            ],
+            "label-md": [
+              "14px",
+              {
+                lineHeight: "20px",
+                letterSpacing: "0.01em",
+                fontWeight: "500",
+              },
+            ],
+          },
+        },
+      },
+    };
+  </script>
+
+  <script src="/index.js" defer></script>
+
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .tomato-gradient {
+      background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    }
+
+    .text-tomato {
+      color: #e74c3c;
+    }
+
+    .bg-tomato {
+      background-color: #e74c3c;
+    }
+
+    .hover-lift {
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-4px);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
