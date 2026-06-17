@@ -8,7 +8,7 @@ function Footer() {
 
         {/* Home */}
         <Link
-          to="/dashboard"
+          to="/"
           className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500"
         >
           <span className="material-symbols-outlined">timer</span>

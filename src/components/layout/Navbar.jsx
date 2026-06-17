@@ -28,7 +28,7 @@ function Navbar() {
       <nav className="flex items-center gap-6">
 
         <Link to="/timer">Timer</Link>
-        <Link to="/Home">Home</Link>
+        <Link to="/dashboard">Dashboard</Link>
 
         {/* 🔥 AUTH SECTION */}
         {!loggedIn ? (
