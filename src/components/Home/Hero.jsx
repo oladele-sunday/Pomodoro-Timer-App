@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
@@ -31,10 +33,13 @@ function Hero() {
             Start Focusing Free
           </button>
 
-          <button className="glass-card text-on-surface px-8 py-4 rounded-xl w-full sm:w-auto flex items-center justify-center gap-2">
+          <Link
+          to="/timer"
+          className="glass-card text-on-surface px-8 py-4 rounded-xl w-full sm:w-auto flex items-center justify-center gap-2"
+          >
             <span className="material-symbols-outlined">play_circle</span>
             See How it Works
-          </button>
+          </Link>
 
         </div>
 
