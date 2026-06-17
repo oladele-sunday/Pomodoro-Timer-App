@@ -9,6 +9,10 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import Profile from "../pages/Profile/Profile";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
+import ProtectedRoute from "./ProtectedRoute";
+import Tasks from "../pages/Tasks/Tasks";
+
+
 
 function HomePage() {
   return (
@@ -26,6 +30,12 @@ function AppRoutes() {
       <Route path="/" element={<HomePage />} />
       <Route path="/timer" element={<Timer />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard" element={
+        <ProtectedRoute>
+          <Dashboard />
+        </ProtectedRoute>
+      } />
+      <Route path="/tasks" element={<Tasks />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />

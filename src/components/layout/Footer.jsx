@@ -9,32 +9,38 @@ function Footer() {
         {/* Focus */}
         <button className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500">
           <span className="material-symbols-outlined">timer</span>
-          Focus
+          <Link to="/dashboard">
+          Home
+          </Link>
         </button>
 
         {/* Tasks */}
         <button className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500">
           <span className="material-symbols-outlined">checklist</span>
+          <Link to="/tasks">
           Tasks
+          </Link>
         </button>
 
-        {/* Stats */}
+        {/* Stats
         <button className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500">
           <span className="material-symbols-outlined">bar_chart</span>
           Stats
-        </button>
+        </button> */}
 
         {/* Profile */}
         <button className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500">
           <span className="material-symbols-outlined">person</span>
+          <Link to="/profile">
           Profile
+          </Link>
         </button>
 
-        {/* Settings */}
+        {/* Settings
         <button className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500">
           <span className="material-symbols-outlined">settings</span>
           Settings
-        </button>
+        </button> */}
 
       </div>
     </footer>

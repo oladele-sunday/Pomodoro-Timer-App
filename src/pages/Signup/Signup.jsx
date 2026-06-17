@@ -1,6 +1,7 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 function Signup() {
+  const navigate = useNavigate(); 
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -16,7 +17,10 @@ function Signup() {
       return;
     }
 
-    console.log(formData);
+    console.log("user created:", formData);
+    console.log("Registration successful! Redirecting to login page...");
+    navigate("/login");
+
   };
 
   return (
