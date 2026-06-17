@@ -1,0 +1,606 @@
+/* ==========================
+   RESET
+========================== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow - Pomodoro Timer</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <h1>FocusFlow</h1>
+
+        </div>
+
+        <div class="header-right">
+
+            <button class="focus-mode-btn">
+
+                <i class="fa-solid fa-expand"></i>
+
+                <span>Focus Mode</span>
+
+            </button>
+
+            <div class="avatar">
+    <img id="profileImage" src="profile.png" alt="Profile">
+    <input type="file" id="imageUpload" accept="image/*">
+</div>
+
+        </div>
+
+    </header>
+
+    <!-- MOBILE MODE TABS -->
+
+    <section class="mode-tabs">
+
+        <button
+            class="mode-btn active"
+            data-mode="focus">
+            Focus
+        </button>
+
+        <button
+            class="mode-btn"
+            data-mode="shortBreak">
+            Short Break
+        </button>
+
+        <button
+            class="mode-btn"
+            data-mode="longBreak">
+            Long Break
+        </button>
+
+    </section>
+
+    <!-- TASK SECTION -->
+
+    <section class="task-section">
+
+        <p class="task-label">
+            CURRENTLY WORKING ON
+        </p>
+
+        <h2 class="task-title">
+            Develop API Endpoints
+        </h2>
+
+    </section>
+
+    <!-- TIMER SECTION -->
+
+    <section class="timer-section">
+
+        <div class="timer-container">
+
+            <!-- SVG Progress Ring -->
+
+<svg
+    class="progress-ring"
+    width="520"
+    height="520"
+    viewBox="0 0 520 520">
+
+    <circle
+        class="progress-ring-bg"
+        cx="260"
+        cy="260"
+        r="220">
+    </circle>
+
+    <circle
+        class="progress-ring-circle"
+        cx="260"
+        cy="260"
+        r="220">
+    </circle>
+
+</svg>
+
+            <!-- Timer Content -->
+
+            <div class="timer-content">
+
+                <h1 id="timer">
+                    25:00
+                </h1>
+
+                <div class="deep-flow">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    <span>DEEP FLOW</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTROLS -->
+
+    <section class="controls">
+
+        <button
+            id="resetBtn"
+            class="control-btn">
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+        </button>
+
+        <button
+            id="playBtn"
+            class="play-btn">
+
+            <i class="fa-solid fa-play"></i>
+
+        </button>
+
+        <button
+            id="skipBtn"
+            class="control-btn">
+
+            <i class="fa-solid fa-forward-step"></i>
+
+        </button>
+
+    </section>
+
+    <!-- MOBILE BOTTOM NAV -->
+
+    <nav class="bottom-nav">
+
+        <a href="#" class="nav-item active">
+
+            <i class="fa-regular fa-clock"></i>
+
+            <span>Focus</span>
+
+        </a>
+
+        <a href="#" class="nav-item">
+
+            <i class="fa-solid fa-list"></i>
+
+            <span>Tasks</span>
+
+        </a>
+
+        <a href="#" class="nav-item">
+
+            <i class="fa-regular fa-chart-bar"></i>
+
+            <span>Stats</span>
+
+        </a>
+
+        <a href="#" class="nav-item">
+
+            <i class="fa-regular fa-user"></i>
+
+            <span>Profile</span>
+
+        </a>
+
+        <a href="#" class="nav-item">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Settings</span>
+
+        </a>
+
+    </nav>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary:#C6281A;
+    --primary-light:#F6DFDC;
+    --text:#12161F;
+    --text-light:#6B7280;
+    --bg:#F6F7FB;
+    --white:#FFFFFF;
+    --border:#EAEAEA;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:rgba(255,255,255,.4);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo i{
+    color:var(--primary);
+    font-size:24px;
+}
+
+.logo h1{
+    color:var(--primary);
+    font-size:28px;
+    font-weight:700;
+}
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.focus-mode-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:none;
+    background:none;
+    cursor:pointer;
+    color:#4B2E2A;
+    font-size:16px;
+}
+
+.avatar{
+    position: relative;
+}
+
+.avatar img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+    cursor:pointer;
+    border:3px solid #F4D8D4;
+}
+
+#imageUpload{
+    display:none;
+}
+
+/* ==========================
+   MODE TABS
+========================== */
+
+.mode-tabs{
+    max-width:650px;
+    margin:40px auto 0;
+    background:white;
+    border-radius:30px;
+    padding:10px;
+    display:flex;
+    justify-content:space-between;
+    box-shadow:0 4px 12px rgba(0,0,0,.04);
+}
+
+.mode-btn{
+    flex:1;
+    border:none;
+    background:none;
+    padding:20px;
+    border-radius:25px;
+    font-size:20px;
+    cursor:pointer;
+    color:#666;
+}
+
+.mode-btn.active{
+    background:var(--primary-light);
+    color:var(--primary);
+    font-weight:600;
+}
+
+/* ==========================
+   TASK SECTION
+========================== */
+
+.task-section{
+    text-align:center;
+    margin-top:60px;
+}
+
+.task-label{
+    letter-spacing:3px;
+    font-size:14px;
+    font-weight:700;
+    color:#666;
+    margin-bottom:15px;
+}
+
+.task-title{
+    font-size:64px;
+    font-weight:700;
+}
+
+/* ==========================
+   TIMER
+========================== */
+
+.timer-section{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.timer-container{
+    position:relative;
+    width:520px;
+    height:520px;
+}
+
+.progress-ring{
+    transform:rotate(-90deg);
+}
+
+.progress-ring-bg{
+    fill:none;
+    stroke:#E4E6EC;
+    stroke-width:10;
+}
+
+.progress-ring-circle{
+    fill:none;
+    stroke:var(--primary);
+    stroke-width:10;
+    stroke-linecap:round;
+    stroke-dasharray:1382;
+    stroke-dashoffset:0;
+    transition:.5s linear;
+}
+
+.timer-content{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#timer{
+    font-size:120px;
+    font-weight:800;
+    line-height:1;
+}
+
+.deep-flow{
+    margin-top:20px;
+    background:var(--primary-light);
+    color:var(--primary);
+    padding:10px 22px;
+    border-radius:999px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+}
+
+/* ==========================
+   CONTROLS
+========================== */
+
+.controls{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+}
+
+.control-btn{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    border:none;
+    background:white;
+    cursor:pointer;
+    font-size:20px;
+    color:#666;
+}
+
+.play-btn{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:none;
+    cursor:pointer;
+    background:var(--primary);
+    color:white;
+    font-size:30px;
+    box-shadow:0 10px 30px rgba(198,40,26,.3);
+}
+
+/* ==========================
+   MOBILE NAV
+========================== */
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:space-around;
+    padding:12px 10px;
+    border-top:1px solid var(--border);
+}
+
+.nav-item{
+    text-decoration:none;
+    color:#666;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+    font-size:14px;
+}
+
+.nav-item i{
+    font-size:22px;
+}
+
+.nav-item.active{
+    color:var(--primary);
+}
+
+.progress-ring-circle{
+    transition:
+    stroke-dashoffset 1s linear;
+}
+/* ==========================
+   DESKTOP
+========================== */
+
+@media(min-width:1024px){
+
+    .bottom-nav{
+        display:none;
+    }
+
+    .mode-tabs{
+        max-width:380px;
+    }
+
+    .task-title{
+        font-size:56px;
+    }
+
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media(max-width:1024px){
+
+    .task-title{
+        font-size:52px;
+    }
+
+    .timer-container{
+        width:480px;
+        height:480px;
+    }
+
+    #timer{
+        font-size:100px;
+    }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+    .header{
+        padding:20px;
+    }
+
+    .logo h1{
+        font-size:22px;
+    }
+
+    .focus-mode-btn span{
+        display:none;
+    }
+
+    .mode-tabs{
+        width:90%;
+        margin-top:30px;
+    }
+
+    .mode-btn{
+        font-size:16px;
+        padding:14px;
+    }
+
+    .task-section{
+        margin-top:50px;
+        padding:0 20px;
+    }
+
+    .task-title{
+        font-size:34px;
+        line-height:1.2;
+    }
+
+    .timer-container{
+        width:350px;
+        height:350px;
+    }
+
+    .progress-ring{
+        width:350px;
+        height:350px;
+    }
+
+    #timer{
+        font-size:72px;
+    }
+
+    .deep-flow{
+        font-size:14px;
+        padding:8px 18px;
+    }
+
+    .controls{
+        gap:25px;
+        margin-bottom:100px;
+    }
+
+    .play-btn{
+        width:80px;
+        height:80px;
+    }
+}
