@@ -1,4 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+<Link to="/timer">
+  Start Focusing Free
+</Link>
 
 function Navbar() {
   return (
