@@ -85,9 +85,11 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { isLoggedIn, logout } from "../../utils/auth";
+import { useAuth } from "../../context/AuthContext";
 
 function Navbar() {
   const navigate = useNavigate();
+  const { user, logout } = useAuth();
   const loggedIn = isLoggedIn();
 
   const handleLogout = () => {

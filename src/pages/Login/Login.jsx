@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import { useState } from "react";
 
 function Login() {
@@ -14,15 +14,12 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // 🔥 fake user (since no backend yet)
-    const user = {
-      name: formData.email.split("@")[0], // simple name from email
+    const userData = {
+      name: formData.email.split("@")[0],
       email: formData.email,
     };
 
-    localStorage.setItem("user", JSON.stringify(user));
-
-    login(); // sets isLoggedIn = true
+    login(userData); // 🔥 global login
 
     navigate("/dashboard");
   };

@@ -5,11 +5,13 @@ import Footer from "../../components/layout/Footer";
 import Timer from "../Timer/Timer";
 import { getUser } from "../../utils/auth";
 import TaskList from "../../components/Task/TaskList";
+import { useAuth } from "../../context/AuthContext";
+
 
 function Dashboard() {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("timer"); 
-  const user = getUser();
+  const { user } = useAuth();
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
