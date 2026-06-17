@@ -155,15 +155,11 @@ function Timer() {
           </button>
 
         </div>
-        <div className="flex gap-5 mt-10">
-          <button onClick={resetTimer} className="p-4 bg-gray-200 rounded-full">
-            Reset
-          </button>
-        </div>
       </div>
+
       {/* FOOTER */}
       <Footer />
-
+      
     </div>
   );
 
