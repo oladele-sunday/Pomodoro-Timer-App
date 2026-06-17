@@ -3,14 +3,27 @@ import Hero from "../../components/layout/Hero";
 import Footer from "../../components/layout/Footer";
 
 
+// function Home() {
+//   return (
+//     <>
+//       <Navbar />
+//       <Hero />
+//       <Footer />
+//     </>
+//   );
+// }
+
+// export default Home;
+
+
 function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
+      <main className="pt-20">
+        <Hero />
+      </main>
       <Footer />
     </>
   );
 }
-
-export default Home;

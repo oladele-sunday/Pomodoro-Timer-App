@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import Navbar from "../components/layout/Navbar";
-import Footer from "../components/layout/Footer";
-
-// import Timer from "../components/Timer/Timer";
+import Navbar from "../../components/layout/Navbar";
+import Footer from "../../components/layout/Footer";
+import Timer from "../../pages/Timer/Timer";
 // import TaskList from "../components/Task/TaskList";
 // import SettingsModal from "../components/settings/SettingsModal";
 

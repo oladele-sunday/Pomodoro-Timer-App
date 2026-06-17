@@ -41,6 +41,19 @@ function Navbar() {
       {/* Profile */}
       <div className="flex items-center gap-3">
         <Link
+        to="/login"
+        className="text-sm font-medium hover:text-primary"
+        >
+          Login
+        </Link>
+        <Link
+        to="/signup"
+        className="bg-primary text-white px-4 py-2 rounded-lg text-sm"
+        >
+          Sign Up
+        </Link>
+
+        <Link        
           to="/profile"
           className="w-10 h-10 rounded-full border-2 border-primary/20 p-0.5 block"
         >
