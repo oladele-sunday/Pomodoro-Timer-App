@@ -4,7 +4,7 @@ import Footer        from "../components/layout/Footer"
 
 // import Timer         from "../components/Timer/Timer"
 import TaskList      from "../components/Task/TaskList"
-// import SettingsModal from "../components/settings/SettingsModal"
+import SettingsModal from "../components/settings/SettingsModal"
 
 function Dashboard() {
   const [showSettings, setShowSettings] = useState(false)
@@ -35,10 +35,10 @@ function Dashboard() {
       <Footer />
 
       {/* ── SETTINGS MODAL ── */}
-      {/* <SettingsModal
+      <SettingsModal
         isOpen={showSettings}
         onClose={() => setShowSettings(false)}
-      /> */}
+      />
 
     </div>
   )
