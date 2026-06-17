@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import Navbar from "./../components/Home/Navbar";
-import Footer from "./../components/Home/Footer";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 function Timer() {
   const modes = {
@@ -15,7 +15,7 @@ function Timer() {
 
   const timerRef = useRef(null);
 
-  const radius = 220;
+  const radius = 180;
   const circumference = 2 * Math.PI * radius;
 
   const formatTime = (seconds) => {
@@ -102,7 +102,7 @@ function Timer() {
             ))}
         </div>
         {/* TIMER RING */}
-        <div className="relative w-[320px] h-[320px]">
+        <div className="relative w-[320px] h-[280px]">
           <svg className="w-full h-full -rotate-90" viewBox="0 0 520 520">
             <circle
             cx="260"

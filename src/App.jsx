@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Home/Navbar";
-import Hero from "./components/Home/Hero";
-import Footer from "./components/Home/Footer";
+import Navbar from "./components/layout/Navbar";
+import Hero from "./components/layout/Hero";
+import Footer from "./components/layout/Footer";
 import Timer from "./pages/Timer";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
 
         {/* TIMER PAGE */}
         <Route path="/timer" element={<Timer />} />        
+        {/* DASHBOARD PAGE */}
+        <Route path="/dashboard" element={<Dashboard />} />
 
       </Routes>
 
