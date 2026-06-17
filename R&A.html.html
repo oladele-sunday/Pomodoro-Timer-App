@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="R&A.css.css">
+</head>
+<body>
+
+  <!-- Top App Bar -->
+  <header class="topbar">
+    <div class="topbar__brand">
+      <span class="material-symbols-outlined topbar__logo">bubble_chart</span>
+      <h1 class="topbar__title">FocusFlow</h1>
+    </div>
+    <div class="topbar__right">
+      <nav class="topbar__nav">
+        <a class="topbar__nav-item" href="">Focus</a>
+        <a class="topbar__nav-item" href="">Tasks</a>
+        <a class="topbar__nav-item topbar__nav-item--active" href="">Stats</a>
+      </nav>
+      <div class="topbar__avatar">
+        <img id="profile-pic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0qP3-x5P01DXwtBdTdLicyzrk_f1b05pyauh4AEIyVHLIaDLOU6o9SklkXOirVC8cs6QHOdSVrZbiQkYKNwpJM6IuLIV8xoxeIbDoqhR7OB_XGdC9-cVOgDuBMpN_5EjNOUpR-zwVt9noH-DKIP2s2sjJD5G2s3AVx3s1anicJ1aU4iagRe3Gdbh-bkzX1_jeE1cOSdslQeOzkr8QEOCLGwRnIIHtWmSy8KecrLpdKfRQrMEaEIk2MASgl_t0fpdTky-quAT7ge4" alt="User avatar">
+        <input type="file" id="file-input" accept="image/*">
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header__text">
+        <p class="page-header__eyebrow">Deep Work Insights</p>
+        <h2 class="page-header__title">Performance Reports</h2>
+      </div>
+      <div class="period-tabs">
+        <button class="period-tabs__btn period-tabs__btn--active" data-period="week">Week</button>
+        <button class="period-tabs__btn" data-period="month">Month</button>
+        <button class="period-tabs__btn" data-period="year">Year</button>
+      </div>
+    </section>
+
+    <!-- Metrics Grid -->
+    <section class="metrics-grid" data-period="week">
+
+      <div class="metric-card glass-card">
+        <span class="metric-card__label">Total Focus Time</span>
+        <div class="metric-card__value-row">
+          <span class="metric-card__number">42</span>
+          <span class="metric-card__unit">h</span>
+        </div>
+        <div class="metric-card__trend metric-card__trend--up">
+          <span class="material-symbols-outlined metric-card__trend-icon">trending_up</span>
+          <span>+12% from last week</span>
+        </div>
+      </div>
+
+      <div class="metric-card glass-card">
+        <span class="metric-card__label">Tasks Completed</span>
+        <div class="metric-card__value-row">
+          <span class="metric-card__number">12</span>
+          <span class="metric-card__unit">/15</span>
+        </div>
+        <div class="metric-card__trend metric-card__trend--neutral">
+          <span class="material-symbols-outlined metric-card__trend-icon">event_available</span>
+          <span>80% completion rate</span>
+        </div>
+      </div>
+
+      <div class="metric-card glass-card">
+        <span class="metric-card__label">Avg. Session</span>
+        <div class="metric-card__value-row">
+          <span class="metric-card__number">25</span>
+          <span class="metric-card__unit">m</span>
+        </div>
+        <div class="metric-card__trend metric-card__trend--primary">
+          <span class="material-symbols-outlined metric-card__trend-icon">bolt</span>
+          <span>Optimal flow state zone</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="metrics-grid hidden" data-period="month">
+
+      <div class="metric-card glass-card">
+        <span class="metric-card__label">Total Focus Time</span>
+        <div class="metric-card__value-row">
+          <span class="metric-card__number">168</span>
+          <span class="metric-card__unit">h</span>
+        </div>
+        <div class="metric-card__trend metric-card__trend--up">
+          <span class="material-symbols-outlined metric-card__trend-icon">trending_up</span>
+          <span>+5% from last month</span>
+        </div>
+      </div>
+
+      <div class="metric-card glass-card">
+        <span class="metric-card__label">Tasks Completed</span>
+        <div class="metric-card__value-row">
+          <span class="metric-card__number">52</span>
+          <span class="metric-card__unit">/60</span>
+        </div>
+        <div class="metric-card__trend metric-card__trend--neutral">
+          <span class="material-symbols-outlined metric-card__trend-icon">event_available</span>
+          <span>87% completion rate</span>
+        </div>
+      </div>
+
+      <div class="metric-card glass-card">
+        <span class="metric-card__label">Avg. Session</span>
+        <div class="metric-card__value-row">
+          <span class="metric-card__number">27</span>
+          <span class="metric-card__unit">m</span>
+        </div>
+        <div class="metric-card__trend metric-card__trend--primary">
+          <span class="material-symbols-outlined metric-card__trend-icon">bolt</span>
+          <span>Strong consistency</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="metrics-grid hidden" data-period="year">
+
+      <div class="metric-card glass-card">
+        <span class="metric-card__label">Total Focus Time</span>
+        <div class="metric-card__value-row">
+          <span class="metric-card__number">2040</span>
+          <span class="metric-card__unit">h</span>
+        </div>
+        <div class="metric-card__trend metric-card__trend--up">
+          <span class="material-symbols-outlined metric-card__trend-icon">trending_up</span>
+          <span>+18% year-over-year</span>
+        </div>
+      </div>
+
+      <div class="metric-card glass-card">
+        <span class="metric-card__label">Tasks Completed</span>
+        <div class="metric-card__value-row">
+          <span class="metric-card__number">650</span>
+          <span class="metric-card__unit">/720</span>
+        </div>
+        <div class="metric-card__trend metric-card__trend--neutral">
+          <span class="material-symbols-outlined metric-card__trend-icon">event_available</span>
+          <span>90% completion rate</span>
+        </div>
+      </div>
+
+      <div class="metric-card glass-card">
+        <span class="metric-card__label">Avg. Session</span>
+        <div class="metric-card__value-row">
+          <span class="metric-card__number">28</span>
+          <span class="metric-card__unit">m</span>
+        </div>
+        <div class="metric-card__trend metric-card__trend--primary">
+          <span class="material-symbols-outlined metric-card__trend-icon">bolt</span>
+          <span>Peak annual performance</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts-grid" data-period="week">
+
+      <!-- Weekly Trends Line Chart -->
+      <div class="chart-card glass-card">
+        <div class="chart-card__header">
+          <h3 class="chart-card__title">Weekly Productivity Trends</h3>
+          <span class="material-symbols-outlined chart-card__more">more_horiz</span>
+        </div>
+        <div class="chart-card__body chart-card__body--line">
+          <svg class="line-chart" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="lineGradient-week" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#b1241a;stop-opacity:0.3"></stop>
+                <stop offset="100%" style="stop-color:#b1241a;stop-opacity:0"></stop>
+              </linearGradient>
+            </defs>
+            <path
+              class="line-chart__fill"
+              d="M0,180 L50,140 L100,160 L150,100 L200,120 L250,60 L300,80 L350,40 L400,60 L400,200 L0,200 Z"
+              fill="url(#lineGradient-week)"
+            ></path>
+            <path
+              class="line-chart__line"
+              d="M0,180 L50,140 L100,160 L150,100 L200,120 L250,60 L300,80 L350,40 L400,60"
+              fill="none"
+              stroke="#b1241a"
+              stroke-width="3"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+          <div class="line-chart__labels">
+            <span>Mon</span><span>Tue</span><span>Wed</span>
+            <span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Focus Hours Bar Chart -->
+      <div class="chart-card glass-card">
+        <div class="chart-card__header">
+          <h3 class="chart-card__title">Focus Hours per Day</h3>
+          <div class="chart-card__legend">
+            <div class="chart-card__legend-dot"></div>
+            <span>Deep Work</span>
+          </div>
+        </div>
+        <div class="chart-card__body chart-card__body--bar">
+          <div class="bar-chart">
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--dim bar-animate" style="height:120px"></div>
+              <span class="bar-chart__label">M</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-animate" style="height:180px"></div>
+              <span class="bar-chart__label">T</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--dim bar-animate" style="height:140px"></div>
+              <span class="bar-chart__label">W</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-animate" style="height:220px"></div>
+              <span class="bar-chart__label">T</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-animate" style="height:160px"></div>
+              <span class="bar-chart__label">F</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--dim bar-animate" style="height:80px"></div>
+              <span class="bar-chart__label">S</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--faint bar-animate" style="height:60px"></div>
+              <span class="bar-chart__label">S</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="charts-grid hidden" data-period="month">
+
+      <!-- Monthly Trends Line Chart -->
+      <div class="chart-card glass-card">
+        <div class="chart-card__header">
+          <h3 class="chart-card__title">Monthly Productivity Trends</h3>
+          <span class="material-symbols-outlined chart-card__more">more_horiz</span>
+        </div>
+        <div class="chart-card__body chart-card__body--line">
+          <svg class="line-chart" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="lineGradient-month" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:0.3"></stop>
+                <stop offset="100%" style="stop-color:#1a73e8;stop-opacity:0"></stop>
+              </linearGradient>
+            </defs>
+            <path
+              class="line-chart__fill"
+              d="M0,170 L50,150 L100,140 L150,130 L200,115 L250,95 L300,100 L350,110 L400,90 L400,200 L0,200 Z"
+              fill="url(#lineGradient-month)"
+            ></path>
+            <path
+              class="line-chart__line"
+              d="M0,170 L50,150 L100,140 L150,130 L200,115 L250,95 L300,100 L350,110 L400,90"
+              fill="none"
+              stroke="#1a73e8"
+              stroke-width="3"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+          <div class="line-chart__labels">
+            <span>Wk 1</span><span>Wk 2</span><span>Wk 3</span>
+            <span>Wk 4</span><span>Wk 5</span><span>Wk 6</span><span>Wk 7</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Monthly Focus Bar Chart -->
+      <div class="chart-card glass-card">
+        <div class="chart-card__header">
+          <h3 class="chart-card__title">Average Focus Hours</h3>
+          <div class="chart-card__legend">
+            <div class="chart-card__legend-dot"></div>
+            <span>Average per Week</span>
+          </div>
+        </div>
+        <div class="chart-card__body chart-card__body--bar">
+          <div class="bar-chart">
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--dim bar-animate" style="height:150px"></div>
+              <span class="bar-chart__label">W1</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-animate" style="height:170px"></div>
+              <span class="bar-chart__label">W2</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--dim bar-animate" style="height:160px"></div>
+              <span class="bar-chart__label">W3</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-animate" style="height:190px"></div>
+              <span class="bar-chart__label">W4</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-animate" style="height:180px"></div>
+              <span class="bar-chart__label">W5</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--dim bar-animate" style="height:170px"></div>
+              <span class="bar-chart__label">W6</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--faint bar-animate" style="height:160px"></div>
+              <span class="bar-chart__label">W7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="charts-grid hidden" data-period="year">
+
+      <!-- Yearly Trends Line Chart -->
+      <div class="chart-card glass-card">
+        <div class="chart-card__header">
+          <h3 class="chart-card__title">Yearly Productivity Trends</h3>
+          <span class="material-symbols-outlined chart-card__more">more_horiz</span>
+        </div>
+        <div class="chart-card__body chart-card__body--line">
+          <svg class="line-chart" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="lineGradient-year" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#00897b;stop-opacity:0.3"></stop>
+                <stop offset="100%" style="stop-color:#00897b;stop-opacity:0"></stop>
+              </linearGradient>
+            </defs>
+            <path
+              class="line-chart__fill"
+              d="M0,160 L50,150 L100,135 L150,120 L200,110 L250,100 L300,95 L350,90 L400,80 L400,200 L0,200 Z"
+              fill="url(#lineGradient-year)"
+            ></path>
+            <path
+              class="line-chart__line"
+              d="M0,160 L50,150 L100,135 L150,120 L200,110 L250,100 L300,95 L350,90 L400,80"
+              fill="none"
+              stroke="#00897b"
+              stroke-width="3"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+          <div class="line-chart__labels">
+            <span>Q1</span><span>Q2</span><span>Q3</span>
+            <span>Q4</span><span>Q5</span><span>Q6</span><span>Q7</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yearly Focus Bar Chart -->
+      <div class="chart-card glass-card">
+        <div class="chart-card__header">
+          <h3 class="chart-card__title">Yearly Focus Hours</h3>
+          <div class="chart-card__legend">
+            <div class="chart-card__legend-dot"></div>
+            <span>Monthly average</span>
+          </div>
+        </div>
+        <div class="chart-card__body chart-card__body--bar">
+          <div class="bar-chart">
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--dim bar-animate" style="height:140px"></div>
+              <span class="bar-chart__label">Jan</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-animate" style="height:150px"></div>
+              <span class="bar-chart__label">Feb</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--dim bar-animate" style="height:170px"></div>
+              <span class="bar-chart__label">Mar</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-animate" style="height:160px"></div>
+              <span class="bar-chart__label">Apr</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-animate" style="height:200px"></div>
+              <span class="bar-chart__label">May</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--dim bar-animate" style="height:180px"></div>
+              <span class="bar-chart__label">Jun</span>
+            </div>
+            <div class="bar-chart__col">
+              <div class="bar-chart__bar bar-chart__bar--faint bar-animate" style="height:170px"></div>
+              <span class="bar-chart__label">Jul</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Premium CTA -->
+    <section class="premium-cta glass-card">
+      <div class="premium-cta__content">
+        <div class="premium-cta__text">
+          <div class="premium-cta__eyebrow">
+            <span class="material-symbols-outlined">workspace_premium</span>
+            <span>Premium Feature</span>
+          </div>
+          <h2 class="premium-cta__title">Unlock Yearly Analytics</h2>
+          <p class="premium-cta__body">
+            Get deep historical data, personalized focus coaching, and long-term productivity trends with a Premium subscription.
+          </p>
+          <div class="premium-cta__actions">
+            <button class="btn btn--primary">Go Premium</button>
+            <button class="btn btn--ghost">Compare Plans</button>
+          </div>
+        </div>
+        <div class="premium-cta__image-wrap">
+          <img
+            class="premium-cta__image"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi2wOYlp1ecalV1dxjI5lUr3b8ddmhN0oHIVMhjHukFh97DOVswBp85uKRbCUfV-FMGl5Bvpo5NK6rWg59VMfkJnIbcjFtxeJ0WOagycs41nmJ8o2TWSmbI-UFy3h1napwjY5PEOQTL2ajM7gbJEaf1KXU1qSB3AimH2tB_oYBHdb393RRGTVbJYP2cjhGRauYGZESYjD_hcuel5f36L1PpBm2SqcFNhuYc3agk84CExur5CDBUeMZ7-S4iPaGdVR_Xm3thLLuq24"
+            alt="Premium analytics dashboard"
+          >
+          <div class="premium-cta__badge">
+            <span class="material-symbols-outlined">auto_graph</span>
+          </div>
+        </div>
+      </div>
+      <div class="premium-cta__blob premium-cta__blob--right"></div>
+      <div class="premium-cta__blob premium-cta__blob--left"></div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Nav (Mobile) -->
+  <nav class="bottom-nav">
+    <a href="" class="bottom-nav__item">
+      <span class="material-symbols-outlined">timer</span>
+      <span>Focus</span>
+    </a>
+    <a href="" class="bottom-nav__item">
+      <span class="material-symbols-outlined">format_list_bulleted</span>
+      <span>Tasks</span>
+    </a>
+    <a href="" class="bottom-nav__item bottom-nav__item--active">
+      <span class="material-symbols-outlined">analytics</span>
+      <span>Stats</span>
+    </a>
+    <a href="" class="bottom-nav__item">
+      <span class="material-symbols-outlined">person</span>
+      <span>Profile</span>
+    </a>
+    <a href="" class="bottom-nav__item">
+      <span class="material-symbols-outlined">settings</span>
+      <span>Settings</span>
+    </a>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <span class="site-footer__name">FocusFlow</span>
+        <p class="site-footer__copy">© 2024 FocusFlow Productivity. Designed for Deep Work.</p>
+      </div>
+      <div class="site-footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+        <a href="#">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
