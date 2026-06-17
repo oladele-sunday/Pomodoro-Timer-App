@@ -3,7 +3,7 @@ import Header        from "../components/layout/Header"
 import Footer        from "../components/layout/Footer"
 
 // import Timer         from "../components/Timer/Timer"
-// import TaskList      from "../components/Task/TaskList"
+import TaskList      from "../components/Task/TaskList"
 // import SettingsModal from "../components/settings/SettingsModal"
 
 function Dashboard() {
@@ -27,8 +27,7 @@ function Dashboard() {
 
         {/* Divider line */}
         <div className="w-full max-w-md border-t border-white/10" />
-
-        {/* <TaskList /> */}
+        <TaskList />
 
       </main>
 
