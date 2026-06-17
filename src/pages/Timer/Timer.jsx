@@ -15,7 +15,7 @@ function Timer() {
 
   const timerRef = useRef(null);
 
-  const radius = 180;
+  const radius = 250;
   const circumference = 2 * Math.PI * radius;
 
   const formatTime = (seconds) => {
@@ -86,7 +86,7 @@ function Timer() {
       {/* NAVBAR */}
       <Navbar />
       {/* MAIN CONTENT */}
-      <div className="flex-1 flex flex-col items-center justify-center pt-20">
+      <div className="flex-1 flex flex-col items-center justify-center pt-5">
         {/* MODE BUTTONS */}
         <div className="flex gap-3 mb-8">
           {Object.keys(modes).map((mode) => (

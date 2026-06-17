@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import Hero from "../components/layout/Hero";
 import Footer from "../components/layout/Footer";
-
+import Home from "../pages/Home/Home";
 import Timer from "../pages/Timer/Timer";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Profile from "../pages/Profile/Profile";
@@ -27,9 +27,10 @@ function HomePage() {
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<Home />} />
       <Route path="/timer" element={<Timer />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/tasks" element={<Tasks />} />
       <Route path="/dashboard" element={
         <ProtectedRoute>
           <Dashboard />
