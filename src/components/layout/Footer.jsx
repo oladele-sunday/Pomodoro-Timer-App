@@ -6,41 +6,32 @@ function Footer() {
 
       <div className="flex justify-between items-center px-4 py-3">
 
-        {/* Focus */}
-        <button className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500">
+        {/* Home */}
+        <Link
+          to="/dashboard"
+          className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500"
+        >
           <span className="material-symbols-outlined">timer</span>
-          <Link to="/dashboard">
           Home
-          </Link>
-        </button>
+        </Link>
 
         {/* Tasks */}
-        <button className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500">
+        <Link
+          to="/tasks"
+          className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500"
+        >
           <span className="material-symbols-outlined">checklist</span>
-          <Link to="/tasks">
           Tasks
-          </Link>
-        </button>
-
-        {/* Stats
-        <button className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500">
-          <span className="material-symbols-outlined">bar_chart</span>
-          Stats
-        </button> */}
+        </Link>
 
         {/* Profile */}
-        <button className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500">
+        <Link
+          to="/profile"
+          className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500"
+        >
           <span className="material-symbols-outlined">person</span>
-          <Link to="/profile">
           Profile
-          </Link>
-        </button>
-
-        {/* Settings
-        <button className="flex flex-col items-center text-xs text-gray-600 hover:text-red-500">
-          <span className="material-symbols-outlined">settings</span>
-          Settings
-        </button> */}
+        </Link>
 
       </div>
     </footer>
