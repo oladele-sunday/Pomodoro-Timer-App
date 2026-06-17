@@ -1,7 +1,7 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { useState } from "react";
-import Navbar from "../../components/layout/Navbar";
+import Footer from "../../components/layout/Footer";
 
 function Login() {
   const navigate = useNavigate();
