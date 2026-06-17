@@ -83,6 +83,7 @@ function Login() {
           </Link>
         </p>
       </div>
+      <Footer />
     </div>
   );
 }
