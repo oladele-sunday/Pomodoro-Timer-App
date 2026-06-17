@@ -19,7 +19,7 @@ function Login() {
       email: formData.email,
     };
 
-    login(userData); // 🔥 global login
+    login(userData); // 🔥 global login  
 
     navigate("/dashboard");
   };

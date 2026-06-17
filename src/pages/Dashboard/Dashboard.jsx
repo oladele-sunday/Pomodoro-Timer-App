@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import Timer from "../Timer/Timer";
-import { getUser } from "../../utils/auth";
+import { getUser } from "../../utils/auth.js";
 import TaskList from "../../components/Task/TaskList";
 import { useAuth } from "../../context/AuthContext";
 
